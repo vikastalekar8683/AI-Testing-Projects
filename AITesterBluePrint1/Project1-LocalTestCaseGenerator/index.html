@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilot | Local LLM Test Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Premium UI Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="logo">PILOT</div>
+      <div class="status-badge" id="ollama-status">Connecting to Ollama Backend...</div>
+    </header>
+
+    <main class="chat-container">
+      <div id="chat-messages" class="messages">
+        <!-- Messages will appear here -->
+        <div class="message assistant">
+          Hello! I am your Testcase Generation Pilot. Paste your code below, and I will generate comprehensive test
+          cases using qwen3:4b via our Python backend.
+        </div>
+      </div>
+    </main>
+
+    <footer class="input-area">
+      <div class="input-wrapper">
+        <textarea id="user-input" placeholder="Paste your code here... (Shift+Enter for newline)"></textarea>
+        <button id="send-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+        </button>
+      </div>
+    </footer>
+  </div>
+  <script>console.log('Pilot UI Bootstrapped');</script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

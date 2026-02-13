@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L.A.S.T. Converter</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--bg-secondary);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: calc(100vh - 120px);
+        }
+
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-secondary);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .editor-header {
+            padding: 0.75rem 1rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        textarea {
+            flex-grow: 1;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border: none;
+            padding: 1rem;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+            resize: none;
+            outline: none;
+            line-height: 1.5;
+        }
+
+        button.convert-btn {
+            background: linear-gradient(135deg, var(--accent), #8b5cf6);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button.convert-btn:hover {
+            opacity: 0.9;
+        }
+
+        button.convert-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .status-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--bg-secondary);
+            padding: 0.5rem 2rem;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Spinner */
+        .loader {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid var(--accent);
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">âš¡ B.L.A.S.T. Converter</div>
+        <div style="display: flex; align-items: center;">
+            <div class="loader" id="loader"></div>
+            <button class="convert-btn" onclick="convertCode()" id="convertBtn">Convert to Playwright âžœ</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Source Editor -->
+        <div class="editor-container">
+            <div class="editor-header">
+                <span>ðŸ”® Java Selenium (Source)</span>
+            </div>
+            <textarea id="sourceCode" placeholder="// Paste your Java Selenium code here...
+@Test
+public void exampleTest() {
+    driver.get('https://example.com');
+}"></textarea>
+        </div>
+
+        <!-- Target Editor -->
+        <div class="editor-container">
+            <div class="editor-header">
+                <span>ðŸš€ Playwright TypeScript (Target)</span>
+            </div>
+            <textarea id="targetCode" readonly placeholder="// Converted code will appear here..."></textarea>
+        </div>
+    </main>
+
+    <div class="status-bar" id="statusBar">Ready</div>
+
+    <script>
+        async function convertCode() {
+            const sourceCode = document.getElementById('sourceCode').value;
+            const targetArea = document.getElementById('targetCode');
+            const loader = document.getElementById('loader');
+            const btn = document.getElementById('convertBtn');
+            const status = document.getElementById('statusBar');
+
+            if (!sourceCode.trim()) {
+                alert("Please enter some Java code first.");
+                return;
+            }
+
+            // UI Loading State
+            loader.style.display = 'block';
+            btn.disabled = true;
+            targetArea.value = "";
+            status.innerText = "Streaming via Local LLM...";
+
+            try {
+                const response = await fetch('/api/convert', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ source_code: sourceCode })
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText || response.statusText);
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    targetArea.value += chunk;
+                    targetArea.scrollTop = targetArea.scrollHeight;
+                }
+
+                status.innerText = "Conversion Complete âœ…";
+
+            } catch (error) {
+                targetArea.value += "\n// Error: " + error.message;
+                status.innerText = "Connection Failed â Œ";
+            } finally {
+                loader.style.display = 'none';
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
