@@ -9,42 +9,38 @@ def generate_test_plan(jira_payload, llm_type="local", model_name="gpt-oss:120b"
     
     # 1. Define a focused System Prompt to request deep detail and structured cases
     system_prompt = f"""Task: Act as an expert QA Automation Engineer. Generate a HIGHLY DETAILED Software Test Plan for the Jira issue provided below.
-Provide deep, comprehensive detail for every section. Do NOT provide generic summaries.
 
 JIRA ISSUE PAYLOAD:
 {json.dumps(jira_payload, indent=2)}
 
 INSTRUCTIONS:
-1. TEST OBJECTIVES: Clearly define exactly what success looks like for this feature.
-2. SCOPE: Be specific about what is included and, crucially, what is OUT OF SCOPE.
-3. TEST CASES: For each functional requirement, create a detailed test case object. 
-   - Steps must be numbered and precise.
-   - Expected results must be clear and measurable.
-4. NON-FUNCTIONAL: Include performance, security, and usability considerations relevant to this specific task.
-5. RISK ANALYSIS: Identify specific technical or business risks associated with these changes.
+1. CRITICAL: Your output MUST be valid JSON.
+2. TEST OBJECTIVES: List specific goals for this feature (Array of strings).
+3. SCOPE: List what is IN and what is OUT of scope (Array of strings).
+4. TEST CASES: Create detailed objects. Steps MUST be an array of strings.
+5. NON-FUNCTIONAL: List performance, security, and usability points (Array of strings).
+6. FORMATTING: For multi-line text sections (like objectives or risks), ALWAYS use an ARRAY OF STRINGS. 
 
-OUTPUT FORMAT: Strict JSON only. No markdown fences.
-
-JSON SCHEMA:
+JSON SCHEMA (FOLLOW EXACTLY):
 {{
-  "test_objectives": "string",
-  "scope": "string",
+  "test_objectives": ["string"],
+  "scope": ["string"],
   "detailed_test_cases": [
     {{
       "id": "TC-01",
       "title": "string",
       "preconditions": "string",
-      "steps": ["step 1", "step 2"],
+      "steps": ["Step 1", "Step 2"],
       "expected_result": "string",
       "priority": "High/Medium/Low"
     }}
   ],
   "non_functional_scenarios": ["string"],
   "api_test_scenarios": ["string"],
-  "risk_analysis": "string",
-  "test_data_requirements": "string",
-  "entry_criteria": "string",
-  "exit_criteria": "string"
+  "risk_analysis": ["string"],
+  "test_data_requirements": ["string"],
+  "entry_criteria": ["string"],
+  "exit_criteria": ["string"]
 }}
 """
 

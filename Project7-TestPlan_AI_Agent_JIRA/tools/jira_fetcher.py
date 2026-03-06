@@ -49,6 +49,7 @@ def fetch_jira_issue(issue_id):
 
     payload = {
         "issue_id": issue_id,
+        "project_name": fields.get("project", {}).get("name", "Unknown"),
         "title": fields.get("summary", ""),
         "description": desc_str.strip(),
         "issue_type": fields.get("issuetype", {}).get("name", "Unknown"),
