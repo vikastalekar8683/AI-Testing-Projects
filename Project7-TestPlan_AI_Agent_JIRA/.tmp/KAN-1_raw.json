@@ -1,0 +1,2995 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10000",
+  "self": "https://vikasbugzz.atlassian.net/rest/api/3/issue/10000",
+  "key": "KAN-1",
+  "fields": {
+    "statuscategorychangedate": "2026-03-06T23:35:14.354+0530",
+    "issuetype": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/issuetype/10001",
+      "id": "10001",
+      "description": "A collection of related bugs, stories, and tasks.",
+      "iconUrl": "https://vikasbugzz.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+      "name": "Epic",
+      "subtask": false,
+      "avatarId": 10307,
+      "entityId": "690f6615-c9f3-44d0-9862-ded15eaae995",
+      "hierarchyLevel": 1
+    },
+    "components": [],
+    "timespent": null,
+    "timeoriginalestimate": null,
+    "project": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/project/10000",
+      "id": "10000",
+      "key": "KAN",
+      "name": "MyFirstProject",
+      "projectTypeKey": "software",
+      "simplified": true,
+      "avatarUrls": {
+        "48x48": "https://vikasbugzz.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416",
+        "24x24": "https://vikasbugzz.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=small",
+        "16x16": "https://vikasbugzz.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=xsmall",
+        "32x32": "https://vikasbugzz.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=medium"
+      }
+    },
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Product Requirements Document: VWO Login Dashboard"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Executive Summary"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "This Product Requirements Document (PRD) outlines the comprehensive requirements for the VWO (Visual Website Optimizer) login dashboard at "
+            },
+            {
+              "type": "inlineCard",
+              "attrs": {
+                "url": "http://app.vwo.com"
+              }
+            },
+            {
+              "type": "text",
+              "text": " . VWO is a leading digital experience optimization platform used by over 4,000 brands across 90 countries for A/B testing, conversion rate optimization, and user behavior analysis"
+            },
+            {
+              "type": "text",
+              "text": "12",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": ". The login dashboard serves as the critical entry point for users accessing VWO's comprehensive suite of experimentation, personalization, and analytics tools"
+            },
+            {
+              "type": "text",
+              "text": "23",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Project Overview"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Product Vision"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "To create a secure, intuitive, and efficient login experience that seamlessly connects users to VWO's powerful optimization platform while maintaining enterprise-grade security standards and exceptional user experience"
+            },
+            {
+              "type": "text",
+              "text": "24",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Target Users"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Primary Users: Digital marketers, product managers, UX designers, and developers at growing businesses"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Secondary Users: Enterprise teams, conversion rate optimization specialists, and data analysts"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "User Base: Professionals from companies ranging from 50-200 employees to large enterprises with 1000+ employees"
+                    },
+                    {
+                      "type": "text",
+                      "text": "1",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Business Objectives"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Ensure secure access to VWO's experimentation platform"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Minimize login friction to improve user adoption and retention"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Support enterprise security requirements and compliance standards"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Facilitate seamless onboarding for new users discovering VWO's capabilities"
+                    },
+                    {
+                      "type": "text",
+                      "text": "24",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Current State Analysis"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Based on analysis of the existing VWO login interface, the current system includes:"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Existing Features"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Clean Interface Design: Modern, minimalist login form with VWO branding"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Standard Authentication Fields: Email address and password input fields"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Remember Me Functionality: Checkbox option for persistent login sessions"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Account Registration Link: Direct path to free trial signup for new users"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Product Announcements: Banner highlighting new UI launch with Light and Dark Mode options"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Functional Requirements"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Authentication System"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Login Process"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Primary Authentication: Email and password-based login with secure validation"
+                    },
+                    {
+                      "type": "text",
+                      "text": "56",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Session Management: Secure session handling with configurable timeout periods"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Multi-Factor Authentication: Optional 2FA support for enhanced security"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Single Sign-On (SSO): Enterprise SSO integration capabilities for organizational accounts"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "User Input Validation"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Real-time Validation: Field validation on blur to provide immediate feedback"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Email Format Verification: Automatic email format validation with specialized mobile keyboards"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Password Strength Indicators: Visual feedback for password requirements and strength"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Error Handling: Clear, actionable error messages for failed authentication attempts"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Password Management"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Forgot Password Flow: Streamlined password reset process with secure token generation"
+                    },
+                    {
+                      "type": "text",
+                      "text": "8",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Password Recovery: Multiple recovery options including email-based reset"
+                    },
+                    {
+                      "type": "text",
+                      "text": "8",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Password Requirements: Enforced security standards for password complexity"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "User Experience Features"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Interface Design"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Responsive Design: Mobile-optimized interface with touch-friendly controls"
+                    },
+                    {
+                      "type": "text",
+                      "text": "97",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Auto-focus: Automatic focus on the first input field to reduce user interactions"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Clickable Labels: Enhanced accessibility with clickable form labels"
+                    },
+                    {
+                      "type": "text",
+                      "text": "7",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Loading States: Clear feedback during authentication processing"
+                    },
+                    {
+                      "type": "text",
+                      "text": "9",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Accessibility Features"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Screen Reader Support: ARIA labels and keyboard navigation compatibility"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "High Contrast Mode: Accessibility options for visually impaired users"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Keyboard Navigation: Full keyboard accessibility for all interactive elements"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Branding and Visual Design"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Brand Consistency: Alignment with VWO's overall design system and color scheme"
+                    },
+                    {
+                      "type": "text",
+                      "text": "911",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Visual Appeal: Professional, trustworthy appearance that builds user confidence"
+                    },
+                    {
+                      "type": "text",
+                      "text": "911",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Theme Support: Light and Dark Mode options as highlighted in current announcements"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Technical Requirements"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Security Specifications"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Data Protection"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Encryption: End-to-end encryption for all authentication data transmission"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Secure Storage: Encrypted password storage using industry-standard hashing algorithms"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Session Security: Secure session token generation and management"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "HTTPS Enforcement: SSL/TLS encryption for all login communications"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Compliance Standards"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "GDPR Compliance: European data protection regulation adherence for user data handling"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Enterprise Security: Support for enterprise security policies and audit requirements"
+                    },
+                    {
+                      "type": "text",
+                      "text": "4",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Rate Limiting: Protection against brute force attacks through request throttling"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Performance Requirements"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Load Time Optimization"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Page Load Speed: Login page loading within 2 seconds on standard connections"
+                    },
+                    {
+                      "type": "text",
+                      "text": "12",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Asset Optimization: Compressed images and minified CSS/JavaScript files"
+                    },
+                    {
+                      "type": "text",
+                      "text": "12",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "CDN Integration: Content delivery network utilization for global performance"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Scalability"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "High Availability: 99.9% uptime to support VWO's global user base"
+                    },
+                    {
+                      "type": "text",
+                      "text": "4",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Concurrent Users: Support for thousands of simultaneous login attempts"
+                    },
+                    {
+                      "type": "text",
+                      "text": "4",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Geographic Distribution: Multi-region deployment for optimal global performance"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Integration Requirements"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Platform Integrations"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "VWO Core Platform: Seamless transition to main dashboard after successful authentication"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Analytics Integration: Login success/failure tracking for platform optimization"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Customer Support: Integration with support systems for login assistance"
+                    },
+                    {
+                      "type": "text",
+                      "text": "4",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Third-Party Services"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Enterprise SSO: Support for SAML, OAuth, and other enterprise authentication protocols"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Social Login: Optional integration with Google, Microsoft, and other identity providers"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Marketing Tools: Integration with customer onboarding and analytics platforms"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "User Journey and Flow"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "New User Experience"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "order": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Discovery: User arrives at login page from VWO marketing materials or referrals"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Registration Path: Clear call-to-action for free trial signup with minimal friction"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Onboarding: Guided introduction to VWO's capabilities post-registration"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Returning User Experience"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "order": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Quick Access: Streamlined login process with remembered credentials option"
+                    },
+                    {
+                      "type": "text",
+                      "text": "5",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Dashboard Transition: Immediate access to personalized VWO dashboard"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Recent Activity: Context preservation from previous sessions"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Error Recovery Flow"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "order": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Error Identification: Clear messaging for authentication failures"
+                    },
+                    {
+                      "type": "text",
+                      "text": "8",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Recovery Options: Multiple paths for account recovery and support"
+                    },
+                    {
+                      "type": "text",
+                      "text": "8",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Success Confirmation: Clear indication of successful login completion"
+                    },
+                    {
+                      "type": "text",
+                      "text": "8",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Success Metrics and KPIs"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Performance Metrics"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Login Success Rate: Target 95%+ successful authentication attempts"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Page Load Time: Maintain sub-2-second login page loading"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "User Satisfaction: Achieve 90%+ user satisfaction scores for login experience"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Security Metrics"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Security Incidents: Zero successful brute force attacks or unauthorized access"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Compliance Adherence: 100% compliance with security audit requirements"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Session Security: No unauthorized session hijacking incidents"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Business Metrics"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "User Retention: Improved retention rates through enhanced login experience"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Conversion Rate: Increased trial-to-paid conversion through streamlined onboarding"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Support Volume: Reduced login-related support tickets by 20%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Implementation Considerations"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Development Phases"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 1: Core Authentication"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Secure login form implementation"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Basic validation and error handling"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Password reset functionality"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 2: Enhanced UX"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mobile optimization and responsive design"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Accessibility features implementation"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Advanced validation and feedback"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 3: Enterprise Features"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "SSO integration capabilities"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Advanced security features"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Analytics and monitoring implementation"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Risk Mitigation"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Security Risks"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mitigation: Regular security audits and penetration testing"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Monitoring: Real-time security monitoring and alert systems"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Updates: Regular security patch deployment and vulnerability assessments"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Performance Risks"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Load Testing: Comprehensive performance testing under various load conditions"
+                    },
+                    {
+                      "type": "text",
+                      "text": "12",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Monitoring: Real-time performance monitoring and alerting"
+                    },
+                    {
+                      "type": "text",
+                      "text": "12",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Scaling: Auto-scaling infrastructure to handle traffic spikes"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Compliance and Standards"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Security Standards"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Industry Standards: Compliance with OWASP authentication guidelines"
+                    },
+                    {
+                      "type": "text",
+                      "text": "6",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Data Protection: GDPR and CCPA compliance for user data handling"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Enterprise Requirements: Support for enterprise security policies and audit trails"
+                    },
+                    {
+                      "type": "text",
+                      "text": "4",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Accessibility Standards"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "WCAG Compliance: Web Content Accessibility Guidelines 2.1 AA compliance"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Universal Design: Inclusive design principles for all user abilities"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Testing: Regular accessibility testing and user feedback incorporation"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Future Enhancements"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Advanced Features"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Biometric Authentication: Support for fingerprint and facial recognition on compatible devices"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Adaptive Authentication: Risk-based authentication based on user behavior patterns"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Progressive Web App: Enhanced mobile experience with app-like functionality"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Analytics and Optimization"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A/B Testing: Continuous optimization of login experience using VWO's own platform"
+                    },
+                    {
+                      "type": "text",
+                      "text": "213",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "User Behavior Analysis: Detailed analytics on login patterns and user preferences"
+                    },
+                    {
+                      "type": "text",
+                      "text": "2",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Personalization: Customized login experience based on user history and preferences"
+                    },
+                    {
+                      "type": "text",
+                      "text": "214",
+                      "marks": [
+                        {
+                          "type": "code"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "This comprehensive PRD serves as the foundation for developing a world-class login dashboard that supports VWO's mission of helping businesses optimize their digital experiences while maintaining the highest standards of security, usability, and performance"
+            },
+            {
+              "type": "text",
+              "text": "24",
+              "marks": [
+                {
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    "fixVersions": [],
+    "aggregatetimespent": null,
+    "statusCategory": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/statuscategory/2",
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+    },
+    "resolution": null,
+    "timetracking": {},
+    "customfield_10015": null,
+    "security": null,
+    "attachment": [],
+    "aggregatetimeestimate": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "summary": "Product Requirements Document: VWO Login Dashboard",
+    "issuerestriction": {
+      "issuerestrictions": {},
+      "shouldDisplay": true
+    },
+    "watches": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/issue/KAN-1/watchers",
+      "watchCount": 1,
+      "isWatching": true
+    },
+    "lastViewed": "2026-03-07T00:20:25.918+0530",
+    "creator": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/user?accountId=712020%3A372b174d-e008-4292-bba2-f64a5ab9fcbb",
+      "accountId": "712020:372b174d-e008-4292-bba2-f64a5ab9fcbb",
+      "emailAddress": "vikastalekar8683@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "24x24": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "16x16": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "32x32": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png"
+      },
+      "displayName": "Vikas Bhikaji Talekar",
+      "active": true,
+      "timeZone": "Asia/Calcutta",
+      "accountType": "atlassian"
+    },
+    "subtasks": [],
+    "created": "2026-03-06T23:35:13.700+0530",
+    "customfield_10021": null,
+    "reporter": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/user?accountId=712020%3A372b174d-e008-4292-bba2-f64a5ab9fcbb",
+      "accountId": "712020:372b174d-e008-4292-bba2-f64a5ab9fcbb",
+      "emailAddress": "vikastalekar8683@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "24x24": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "16x16": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png",
+        "32x32": "https://secure.gravatar.com/avatar/b32cd10fd8eb1620026d90fea743bcf9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FVT-0.png"
+      },
+      "displayName": "Vikas Bhikaji Talekar",
+      "active": true,
+      "timeZone": "Asia/Calcutta",
+      "accountType": "atlassian"
+    },
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "priority": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/priority/3",
+      "iconUrl": "https://vikasbugzz.atlassian.net/images/icons/priorities/medium_new.svg",
+      "name": "Medium",
+      "id": "3"
+    },
+    "customfield_10001": null,
+    "labels": [],
+    "customfield_10017": "dark_yellow",
+    "environment": null,
+    "customfield_10019": "0|hzzzzz:",
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "issuelinks": [],
+    "votes": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/issue/KAN-1/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "comment": {
+      "comments": [],
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/issue/10000/comment",
+      "maxResults": 0,
+      "total": 0,
+      "startAt": 0
+    },
+    "assignee": null,
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    },
+    "updated": "2026-03-06T23:35:14.452+0530",
+    "status": {
+      "self": "https://vikasbugzz.atlassian.net/rest/api/3/status/10000",
+      "description": "",
+      "iconUrl": "https://vikasbugzz.atlassian.net/images/icons/statuses/generic.png",
+      "name": "To Do",
+      "id": "10000",
+      "statusCategory": {
+        "self": "https://vikasbugzz.atlassian.net/rest/api/3/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    }
+  }
+}
