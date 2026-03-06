@@ -22,3 +22,13 @@ dist/
 
 # System Files
 Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Workspace
+.tmp/
+.ipynb_checkpoints/

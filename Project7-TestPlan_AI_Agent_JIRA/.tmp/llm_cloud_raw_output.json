@@ -1,98 +1,73 @@
 {
-  "test_objectives": 
-      "To ensure that the VWO login dashboard functionality meets all security, usability, and performance standards outlined in the Product Requirements Document, \n      including features such as authentication, login process, user input validation, password management, interface design, accessibility features, branding, \n      technical requirements, security specifications, compliance standards, performance metrics, security metrics, and business metrics."
-   ,
-   "scope": 
-      "The test scope includes all functional requirements outlined in the PRD, including authentication system, login process, user input validation, \n      password management, interface design, accessibility features, branding, security specifications, compliance standards, \n      and performance metrics. The scope also includes all non-functional requirements, including security, usability, and performance considerations. \n      However, this scope does not include testing of VWO's core functionality or any third-party integrations outside of the login dashboard."
-   ,
+  "test_objectives": "Create a secure, intuitive, and efficient login dashboard for the VWO login experience that seamlessly connects users to VWO's powerful optimization platform while maintaining enterprise-grade security standards and exceptional user experience.",
+   "scope": "The test plan scope includes all features described in the Product Requirements Document (PRD) for the VWO login dashboard, with the following components included: \n   \u2022\n   Authentication System\n   \u2022\n   Login Process\n   \u2022\n   User Input Validation\n   \u2022\n   Password Management\n   \u2022\n   Interface Design\n   \u2022\n   Accessibility Features\n   \u2022\n   Branding and Visual Design\n   \u2022\n   Security Specifications\n   \u2022\n   Data Protection\n   \u2022\n   Compliance Standards\n   \u2022\n   Load Time Optimization\n   \u2022\n   Scalability\n   \u2022\n   Platform Integrations\n   \u2022\n   Third-Party Services\n   \u2022\n   New User Experience\n   \u2022\n   Returning User Experience\n   \u2022\n   Error Recovery Flow\n   Out of scope includes:\n   Integrations with other VWO features or products\n   Customized branding and visual design\n   Advanced analytics and optimization features",
    "detailed_test_cases": [
       {
-        "id": "TC-01",
-        "title": "Authentication System",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user navigates to the VWO login page and enters their username and password",
-          "Step 2: The user clicks the login button",
-          "Step 3: The system authenticates the user credentials and logs them in"
-        ],
-        "expected_result": "The user is successfully logged in and redirected to the VWO dashboard",
-        "priority": "High"
+         "id": "TC-01: Authentication System",
+         "title": "TC-01: Authentication System - Valid User Credentials",
+         "preconditions": "User has not logged in previously and has a valid VWO account",
+         "steps": [
+            "Step 1: Enter valid username and password in the login form",
+            "Step 2: Click the 'Log In' button"
+         ],
+         "expected_result": "User should be successfully logged in and redirected to the VWO dashboard",
+         "priority": "High"
       },
       {
-        "id": "TC-02",
-        "title": "Login Process",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user navigates to the VWO login page and clicks the forgot password link",
-          "Step 2: The system redirects the user to the forgot password page and prompts them to enter their email address",
-          "Step 3: The user enters their email address and clicks submit",
-          "Step 4: The system sends a password reset email to the user's email address"
-        ],
-        "expected_result": "The user receives a password reset email and is able to reset their password",
-        "priority": "Medium"
+         "id": "TC-02: Login Process",
+         "title": "TC-02: Login Process - Invalid User Credentials",
+         "preconditions": "User has not logged in previously and has an invalid VWO account",
+         "steps": [
+            "Step 1: Enter invalid username and password in the login form",
+            "Step 2: Click the 'Log In' button"
+         ],
+         "expected_result": "User should see an error message indicating incorrect username or password",
+         "priority": "High"
       },
       {
-        "id": "TC-03",
-        "title": "User Input Validation",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user attempts to login with an invalid username",
-          "Step 2: The system displays an error message indicating that the username is invalid",
-          "Step 3: The user attempts to login with an invalid password",
-          "Step 4: The system displays an error message indicating that the password is invalid"
-        ],
-        "expected_result": "The system displays an error message indicating that the username or password is invalid",
-        "priority": "Low"
+         "id": "TC-03: User Input Validation",
+         "title": "TC-03: User Input Validation - Empty Fields",
+         "preconditions": "User has not logged in previously",
+         "steps": [
+            "Step 1: Leave username and password fields empty in the login form",
+            "Step 2: Click the 'Log In' button"
+         ],
+         "expected_result": "User should see error messages indicating required fields are empty",
+         "priority": "Medium"
       },
       {
-        "id": "TC-04",
-        "title": "Password Management",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user attempts to change their password",
-          "Step 2: The system requires the user to enter their current password and a new password",
-          "Step 3: The system verifies the user's current password and updates their password if valid"
-        ],
-        "expected_result": "The user's password is successfully updated",
-        "priority": "High"
+         "id": "TC-04: Password Management",
+         "title": "TC-04: Password Management - Forgot Password",
+         "preconditions": "User has not logged in previously",
+         "steps": [
+            "Step 1: Click the 'Forgot Password' link",
+            "Step 2: Enter email address in the forgot password form"
+         ],
+         "expected_result": "User should receive an email to reset password",
+         "priority": "Medium"
       },
       {
-        "id": "TC-05",
-        "title": "Interface Design",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user navigates to the VWO login page",
-          "Step 2: The system displays a clear and concise login form with input fields for username and password",
-          "Step 3: The user submits the login form and is redirected to the VWO dashboard"
-        ],
-        "expected_result": "The user is able to successfully login and access the VWO dashboard",
-        "priority": "Medium"
-      },
-      {
-        "id": "TC-06",
-        "title": "Accessibility Features",
-        "preconditions": "The user has a valid VWO account",
-        "steps": [
-          "Step 1: The user navigates to the VWO login page using assistive technology",
-          "Step 2: The system displays the login form in a clear and navigable format",
-          "Step 3: The user submits the login form and is redirected to the VWO dashboard"
-        ],
-        "expected_result": "The user is able to successfully login and access the VWO dashboard using assistive technology",
-        "priority": "High"
+         "id": "TC-05: Interface Design",
+         "title": "TC-05: Interface Design - Responsive Design",
+         "preconditions": "User is on a mobile device",
+         "steps": [
+            "Step 1: Navigate to the VWO login page on mobile device",
+            "Step 2: Observe login form responsiveness"
+         ],
+         "expected_result": "Login form should be responsive and adaptable to mobile screen size",
+         "priority": "Low"
       }
    ],
    "non_functional_scenarios": [
-      "The system responds within a time interval of 3 seconds or less for a user with a normal connection speed",
-      "The system maintains its performance when a large number of concurrent users attempt to login",
-      "The system protects user data from unauthorized access and meets relevant security standards"
+      "Security: Validate VWO login page for OWASP Top 10 vulnerabilities (e.g., SQL Injection, Cross-Site Scripting)",
+      "Usability: Conduct user experience testing to ensure VWO login page meets VWO's usability standards (e.g., color schemes, typography, accessibility)"
    ],
    "api_test_scenarios": [
-      "API endpoint for user authentication"
+      "API authentication tests: Verify correct authentication using VWO's authentication API",
+      "API integration tests: Verify successful integration with VWO's platform integrations"
    ],
-   "risk_analysis": 
-      "The major risks associated with this feature are security risks, such as unsecured password storage or login attempts from unauthorized IP addresses. \n      Additionally, performance risks, such as high latency or slow database queries, could impact the user experience. \n      Compliance risks, such as failure to meet accessibility standards, may also result in fines and reputational damage."
-   ,
-   "test_data_requirements": "Valid user credentials and testing data for performance and security testing",
-   "entry_criteria": "Valid user credentials and testing data for performance and security testing",
-   "exit_criteria": "Successful completion of all tests"
+   "risk_analysis": "Key risks include:\n   \u2022\n   Security vulnerabilities in the login page (e.g., SQL Injection, Cross-Site Scripting)\n   \u2022\n   Performance issues due to inadequate testing or insufficient resources\n   \u2022\n   Compliance and standard risks due to missing or inadequate security features",
+   "test_data_requirements": "VWO test data, including valid and invalid user credentials",
+   "entry_criteria": "A valid VWO user account and a valid test environment are required to execute the test plan",
+   "exit_criteria": "The test plan is complete and all functional and non-functional requirements are met"
 }

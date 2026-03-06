@@ -118,6 +118,31 @@ JSON SCHEMA:
                     response_format={ "type": "json_object" }
                 )
                 raw_output = response.choices[0].message.content
+
+            elif provider.lower() == "google":
+                api_key = os.environ.get("GEMINI_API_KEY")
+                if not api_key:
+                    raise ValueError("Missing 'GEMINI_API_KEY' in .env file. Get one for free at: aistudio.google.com")
+
+                import google.generativeai as genai
+                genai.configure(api_key=api_key)
+                # Configuration for structured JSON
+                generation_config = {
+                  "temperature": 1,
+                  "top_p": 0.95,
+                  "top_k": 40,
+                  "max_output_tokens": 8192,
+                  "response_mime_type": "application/json",
+                }
+                
+                model = genai.GenerativeModel(
+                  model_name=actual_model,
+                  generation_config=generation_config,
+                )
+                
+                chat_session = model.start_chat()
+                response = chat_session.send_message(system_prompt)
+                raw_output = response.text
             else:
                 raise ValueError(f"Unsupported cloud provider: {provider}")
 
